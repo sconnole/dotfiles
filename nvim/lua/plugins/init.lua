@@ -3,9 +3,19 @@ local fn = vim.fn
 return require("packer").startup(function(use)
 	-- Plugin manager, to make sure you don't try to delete it.
 	use("wbthomason/packer.nvim")
-	
-  -- LUA formatter
-  use({ "mhartington/formatter.nvim", config = require("plugins.configs.formatter") })
+
+	-- Searching
+	use("junegunn/fzf")
+	use({
+		"junegunn/fzf.vim",
+		config = require("plugins.configs.fzf"),
+		run = function()
+			fn["fz#install()"](0)
+		end,
+	})
+
+	-- LUA formatter
+	use({ "mhartington/formatter.nvim", config = require("plugins.configs.formatter") })
 	-- Additional vim targets, for smoother text-object motions
 	use("wellle/targets.vim")
 
@@ -24,7 +34,7 @@ return require("packer").startup(function(use)
 		config = require("plugins.configs.nvimtree"), -- notice this is a config from our docs
 	})
 
-  	-- TreeSitter 
+	-- TreeSitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
@@ -32,19 +42,19 @@ return require("packer").startup(function(use)
 	})
 
 	-- Utility for all the things
-	use "nvim-lua/plenary.nvim"
+	use("nvim-lua/plenary.nvim")
 
 	-- Color Scheme
 	use({
-		'folke/tokyonight.nvim', 
-		config = require("plugins.configs.tokyonight")
+		"folke/tokyonight.nvim",
+		config = require("plugins.configs.tokyonight"),
 	})
 
 	-- TS LSP
 	use("jose-elias-alvarez/typescript.nvim")
 
 	-- Prettier
-	use('neovim/nvim-lspconfig')
-	use('jose-elias-alvarez/null-ls.nvim')
-	use({'MunifTanjim/prettier.nvim', config = require("plugins.configs.prettier")})
+	use("neovim/nvim-lspconfig")
+	use("jose-elias-alvarez/null-ls.nvim")
+	use({ "MunifTanjim/prettier.nvim", config = require("plugins.configs.prettier") })
 end)

@@ -60,6 +60,31 @@ nmap("s", "<Plug>(easymotion-overwin-f)")
 nmapsl("e", ":NvimTreeToggle<CR>")
 nmapsl("r", ":NvimTreeRefresh<CR>")
 
+-- search for files within repo
+nmapl("ff", ":Files<CR>")
+nmapl("fh", ":History<CR>")
+-- search for buffers
+nmapl("fu", ":Buffers<CR>")
+-- search commits for buffer
+nmapl("fb", ":BCommits<CR>")
+-- search commits
+nmapl("fc", ":Commits<CR>")
+-- search git files
+nmapl("fg", ":GFiles<CR>")
+-- search git files that have changed
+nmapl("fG", ":GFiles?<CR>")
+-- search lines within a file
+nmapl("fl", ":BLines<CR>")
+-- search for anything with fzf
+nmapl("fz", ":FZF<CR>")
+-- this ripgrep is basic and requires more filtering. All hidden files, names
+-- of files, etc, are searched
+nmapl("fr", ":Rg<CR>")
+-- Ripgrep looking at all lines in all files, including hidden, but exclude
+-- file names from search
+nmapl("fa", ":Ag<CR>")
+nmapl("fm", ":Marks<CR>")
+
 ---- Window Splits
 --Split the entire terminal window
 nmapsl("wsh", ":topleft vnew<CR><ESC>")
