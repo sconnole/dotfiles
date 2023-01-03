@@ -66,6 +66,6 @@ return require("packer").startup(function(use)
 	-- Allow easy commenting
 	use({
 		"numToStr/Comment.nvim",
-		-- config = require("Comment").setup(),
+		config = require("Comment").setup(),
 	})
 end)
