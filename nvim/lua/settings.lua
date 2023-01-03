@@ -31,15 +31,15 @@ o.sidescrolloff = 5
 o.swapfile = false
 o.smarttab = false
 o.tabstop = 2
+o.shiftwidth = 2
+o.expandtab = true
 
 -- Window setttings
 wo.cursorline = true
 wo.signcolumn = "yes" -- needed for Gitsigns
 -- buffer settings
 -- On pressing tab, insert 2 spaces
-bo.expandtab = true
+-- bo.expandtab = true
 -- show existing tab with 2 spaces width
-bo.tabstop = 2
-bo.softtabstop = 0
+-- bo.softtabstop = 0
 -- when indenting with '>', use 2 spaces width. For some reason this doesn't work in vimwiki.
-bo.shiftwidth = 2

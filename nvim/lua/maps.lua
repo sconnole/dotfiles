@@ -98,7 +98,7 @@ nmapsl("bsj", ":rightbelow new<CR><ESC>")
 nmapsl("bsk", ":leftabove new<CR><ESC>")
 nmapsl("bsl", ":rightbelow vnew<CR><ESC>")
 
--- Navigating splits is usually done with <C-w>{some split}. Skip the C-w.
+-- Navigating splits is usually done with <C-w>{scme split}. Skip the C-w.
 nmaps("<C-h>", "<C-w><C-h>")
 nmaps("<C-j>", "<C-w><C-j>")
 nmaps("<C-k>", "<C-w><C-k>")
@@ -107,3 +107,6 @@ nmaps("<C-l>", "<C-w><C-l>")
 -- copy the current buffer path
 cmd("command! CopyBufferPath let @+ = expand('%:p')")
 nmapsl("ybp", ":CopyBufferPath<CR>")
+
+-- copy line while in v
+vmapl("c", '"*y')

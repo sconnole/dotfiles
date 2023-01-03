@@ -25,9 +25,6 @@ return require("packer").startup(function(use)
 	-- Scrolling is less annoying with this, for people following your code
 	use("yuttie/comfortable-motion.vim")
 
-	-- a good git plugin.
-	use("tpope/vim-fugitive")
-
 	-- file explorer.
 	use({
 		"kyazdani42/nvim-tree.lua",
@@ -57,4 +54,18 @@ return require("packer").startup(function(use)
 	use("neovim/nvim-lspconfig")
 	use("jose-elias-alvarez/null-ls.nvim")
 	use({ "MunifTanjim/prettier.nvim", config = require("plugins.configs.prettier") })
+
+	-- GIT settings
+	use({
+		"lewis6991/gitsigns.nvim",
+		requires = { "nvim-lua/plenary.nvim" },
+		config = require("plugins.configs.gitsigns"),
+	})
+	use("tpope/vim-fugitive")
+
+	-- Allow easy commenting
+	use({
+		"numToStr/Comment.nvim",
+		-- config = require("Comment").setup(),
+	})
 end)
