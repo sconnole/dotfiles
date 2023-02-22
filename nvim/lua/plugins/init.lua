@@ -13,7 +13,8 @@ return require("packer").startup(function(use)
 			fn["fz#install()"](0)
 		end,
 	})
-
+	--Icons
+	use("nvim-tree/nvim-web-devicons")
 	-- LUA formatter
 	use({ "mhartington/formatter.nvim", config = require("plugins.configs.formatter") })
 	-- Additional vim targets, for smoother text-object motions
