@@ -1,4 +1,5 @@
 require('nvim-treesitter.configs').setup({
+    auto_install = true,
     elixir_toolchest = {with_unused_atom = {}},
     highlight = {enable = true},
     playground = {
