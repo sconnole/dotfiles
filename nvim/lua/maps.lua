@@ -53,9 +53,6 @@ end
 nmap("<Space>", "")
 g.mapleader = " "
 
--- activate easymotion
-nmap("s", "<Plug>(easymotion-overwin-f)")
-
 -- file explorer
 nmapsl("e", ":NvimTreeToggle<CR>")
 nmapsl("r", ":NvimTreeRefresh<CR>")
@@ -64,18 +61,6 @@ nmapsl("r", ":NvimTreeRefresh<CR>")
 nmapl("ff", ":Files<CR>")
 nmapl("fh", ":History<CR>")
 -- search for buffers
-nmapl("fu", ":Buffers<CR>")
--- search commits for buffer
-nmapl("fb", ":BCommits<CR>")
--- search commits
-nmapl("fc", ":Commits<CR>")
--- search git files
-nmapl("fg", ":GFiles<CR>")
--- search git files that have changed
-nmapl("fG", ":GFiles?<CR>")
--- search lines within a file
-nmapl("fl", ":BLines<CR>")
--- search for anything with fzf
 nmapl("fz", ":FZF<CR>")
 -- this ripgrep is basic and requires more filtering. All hidden files, names
 -- of files, etc, are searched
@@ -84,6 +69,9 @@ nmapl("fr", ":Rg<CR>")
 -- file names from search
 nmapl("fa", ":Ag<CR>")
 nmapl("fm", ":Marks<CR>")
+
+-- Git Blame
+nmapsl("b", ":GitBlame<CR><ESC>")
 
 ---- Window Splits
 --Split the entire terminal window

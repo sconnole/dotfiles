@@ -6,3 +6,5 @@ require("autocmd")
 require("lsp")
 
 vim.cmd("colorscheme tokyonight-storm")
+
+vim.opt.clipboard="unnamed"

@@ -13,15 +13,19 @@ return require("packer").startup(function(use)
 			fn["fz#install()"](0)
 		end,
 	})
+    
+    -- Svelte 
+    use("othree/html5.vim")
+    use("pangloss/vim-javascript")
+    use("evanleck/vim-svelte")
+
 	--Icons
 	use("nvim-tree/nvim-web-devicons")
 	-- LUA formatter
-	use({ "mhartington/formatter.nvim", config = require("plugins.configs.formatter") })
+	use("mhartington/formatter.nvim")
+
 	-- Additional vim targets, for smoother text-object motions
 	use("wellle/targets.vim")
-
-	-- motions, press `s` then any character, then look where you want to go to hit THAT character.
-	use("easymotion/vim-easymotion")
 
 	-- Scrolling is less annoying with this, for people following your code
 	use("yuttie/comfortable-motion.vim")
@@ -54,7 +58,7 @@ return require("packer").startup(function(use)
 	-- Prettier
 	use("neovim/nvim-lspconfig")
 	use("jose-elias-alvarez/null-ls.nvim")
-	use({ "MunifTanjim/prettier.nvim", config = require("plugins.configs.prettier") })
+	-- use({ "MunifTan/jim/prettier.nvim", config = require("plugins.configs.prettier") })
 
 	-- GIT settings
 	use({
@@ -63,6 +67,7 @@ return require("packer").startup(function(use)
 		config = require("plugins.configs.gitsigns"),
 	})
 	use("tpope/vim-fugitive")
+    use("zivyangll/git-blame.vim") -- Git blame
 
 	-- Allow easy commenting
 	use({

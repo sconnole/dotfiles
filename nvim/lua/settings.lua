@@ -30,8 +30,8 @@ o.scrolloff = 5
 o.sidescrolloff = 5
 o.swapfile = false
 o.smarttab = false
-o.tabstop = 2
-o.shiftwidth = 2
+o.tabstop = 4
+o.shiftwidth = 4
 o.expandtab = true
 
 -- Window setttings
