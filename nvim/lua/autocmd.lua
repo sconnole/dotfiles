@@ -1,7 +1,7 @@
 local autocmd = vim.api.nvim_create_autocmd
 
 autocmd("BufWritePre", {
-	pattern = "*.js",
+	pattern = { "*.js", "*.jsx" },
 	callback = function()
 		-- for some reason I can't pass _G.TestFileRace as a param, must br called
 		vim.cmd("Prettier")

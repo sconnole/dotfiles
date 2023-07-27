@@ -14,10 +14,7 @@ return require("packer").startup(function(use)
 		end,
 	})
     
-    -- Svelte 
-    use("othree/html5.vim")
-    use("pangloss/vim-javascript")
-    use("evanleck/vim-svelte")
+    use("towolf/vim-helm")
 
 	--Icons
 	use("nvim-tree/nvim-web-devicons")
@@ -55,10 +52,18 @@ return require("packer").startup(function(use)
 	-- TS LSP
 	use("jose-elias-alvarez/typescript.nvim")
 
+    -- Show function definintions
+    use({
+        "ray-x/lsp_signature.nvim",
+        config = function()
+            require "lsp_signature".on_attach()
+        end
+    })
+
 	-- Prettier
 	use("neovim/nvim-lspconfig")
 	use("jose-elias-alvarez/null-ls.nvim")
-	-- use({ "MunifTan/jim/prettier.nvim", config = require("plugins.configs.prettier") })
+	use({ "MunifTanjim/prettier.nvim" })
 
 	-- GIT settings
 	use({
