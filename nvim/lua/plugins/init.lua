@@ -79,4 +79,36 @@ return require("packer").startup(function(use)
 		"numToStr/Comment.nvim",
 		config = require("Comment").setup(),
 	})
+
+    -- Async Lint Engine
+    -- use("dense-analysis/ale")
+
+    -- Autocomplete
+   use({
+		"hrsh7th/nvim-cmp",
+		config = require("plugins.configs.cmp"),
+		requires = {
+			"hrsh7th/cmp-buffer", --
+			"ray-x/cmp-treesitter", --
+			"hrsh7th/cmp-nvim-lua",
+			"hrsh7th/cmp-nvim-lsp",
+			"hrsh7th/cmp-path",
+			"hrsh7th/cmp-emoji",
+			"onsails/lspkind-nvim",
+			"hrsh7th/cmp-nvim-lsp-signature-help",
+		},
+	}) 
+
+    -- snippets
+	use("L3MON4D3/LuaSnip")
+    use("saadparwaiz1/cmp_luasnip")
+
+    --languages
+    use("fatih/vim-go")
+	use("pangloss/vim-javascript")
+	use("leafgarland/typescript-vim")
+	use("peitalin/vim-jsx-typescript")
+	use("styled-components/vim-styled-components")
+	use("ellisonleao/glow.nvim") -- README
+
 end)
