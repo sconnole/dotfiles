@@ -81,10 +81,13 @@ return require("packer").startup(function(use)
 	})
 
     -- Async Lint Engine
-    -- use("dense-analysis/ale")
+    use({
+        "dense-analysis/ale",
+        config = require("plugins.configs.ale"),
+    })
 
     -- Autocomplete
-   use({
+    use({
 		"hrsh7th/nvim-cmp",
 		config = require("plugins.configs.cmp"),
 		requires = {
