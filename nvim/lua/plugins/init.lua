@@ -13,7 +13,7 @@ return require("packer").startup(function(use)
 			fn["fz#install()"](0)
 		end,
 	})
-    
+
     use("towolf/vim-helm")
 
 	--Icons
@@ -72,13 +72,16 @@ return require("packer").startup(function(use)
 		config = require("plugins.configs.gitsigns"),
 	})
 	use("tpope/vim-fugitive")
-    use("zivyangll/git-blame.vim") -- Git blame
+    use("f-person/git-blame.nvim") -- Git blame
 
 	-- Allow easy commenting
 	use({
 		"numToStr/Comment.nvim",
 		config = require("Comment").setup(),
 	})
+
+    -- Colorizer
+    use("norcalli/nvim-colorizer.lua")
 
     -- Async Lint Engine
     use({
@@ -100,7 +103,7 @@ return require("packer").startup(function(use)
 			"onsails/lspkind-nvim",
 			"hrsh7th/cmp-nvim-lsp-signature-help",
 		},
-	}) 
+	})
 
     -- snippets
 	use("L3MON4D3/LuaSnip")
@@ -114,4 +117,10 @@ return require("packer").startup(function(use)
 	use("styled-components/vim-styled-components")
 	use("ellisonleao/glow.nvim") -- README
 
+    -- LuaLine
+    use('nvim-lualine/lualine.nvim')
+    require('lualine').setup()
+
+    use('williamboman/mason.nvim')
+    require('mason').setup()
 end)
