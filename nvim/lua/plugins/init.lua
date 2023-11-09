@@ -4,6 +4,18 @@ return require("packer").startup(function(use)
 	-- Plugin manager, to make sure you don't try to delete it.
 	use("wbthomason/packer.nvim")
 
+    -- Folding
+    use {
+        'kevinhwang91/nvim-ufo',
+        requires = 'kevinhwang91/promise-async',
+        config = require("plugins.configs.nvim-ufo")
+    }
+    require('ufo').setup({
+        provider_selector = function(bufnr, filetype, buftype)
+            return {'treesitter', 'indent'}
+        end
+    })
+
 	-- Searching
 	use("junegunn/fzf")
 	use({
