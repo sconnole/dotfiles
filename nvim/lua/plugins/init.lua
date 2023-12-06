@@ -49,7 +49,7 @@ return require("packer").startup(function(use)
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
-		config = require("plugins.configs.treesitter"),
+       	config = require("plugins.configs.treesitter"),
 	})
 
 	-- Utility for all the things
@@ -133,6 +133,4 @@ return require("packer").startup(function(use)
     use('nvim-lualine/lualine.nvim')
     require('lualine').setup()
 
-    use('williamboman/mason.nvim')
-    require('mason').setup()
 end)
