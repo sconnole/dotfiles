@@ -4,6 +4,9 @@ return require("packer").startup(function(use)
 	-- Plugin manager, to make sure you don't try to delete it.
 	use("wbthomason/packer.nvim")
 
+    -- Python
+    use("vim-scripts/indentpython.vim")
+
     -- Folding
     use {
         'kevinhwang91/nvim-ufo',
