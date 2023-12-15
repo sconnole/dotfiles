@@ -136,4 +136,7 @@ return require("packer").startup(function(use)
     use('nvim-lualine/lualine.nvim')
     require('lualine').setup()
 
+    -- LSP Management
+    use("williamboman/mason.nvim")
+    require("mason").setup()
 end)
