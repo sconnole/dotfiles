@@ -131,6 +131,7 @@ return require("packer").startup(function(use)
 	use("peitalin/vim-jsx-typescript")
 	use("styled-components/vim-styled-components")
 	use("ellisonleao/glow.nvim") -- README
+    use("averms/black-nvim") -- Python
 
     -- LuaLine
     use('nvim-lualine/lualine.nvim')

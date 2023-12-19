@@ -8,6 +8,14 @@ autocmd("BufWritePre", {
 	end,
 })
 
+autocmd("BufWritePre", {
+	pattern = { "*.py" },
+	callback = function()
+		vim.cmd("silent !black %") -- run the formatter
+		vim.cmd("e!") -- force reload the file
+	end,
+})
+
 autocmd("BufWritePost", {
 	pattern = "*.lua",
 	callback = function()
