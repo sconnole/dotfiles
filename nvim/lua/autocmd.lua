@@ -8,7 +8,7 @@ autocmd("BufWritePre", {
 	end,
 })
 
-autocmd("BufWritePre", {
+autocmd("BufWritePost", {
 	pattern = { "*.py" },
 	callback = function()
 		vim.cmd("silent !black %") -- run the formatter
