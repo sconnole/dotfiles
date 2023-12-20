@@ -18,6 +18,7 @@ return require("packer").startup(function(use)
             return {'treesitter', 'indent'}
         end
     })
+    use("tmhedberg/SimpylFold") --python folding
 
 	-- Searching
 	use("junegunn/fzf")
